@@ -16,38 +16,37 @@ public class Teste {
 	
 
 
-	public static void main(String[] args) throws Exception{
+	/*public static void main(String[] args) throws Exception{
 		
 		    
 		    //Session s=HibernateUtil.getSession();
 		    //System.out.println(s);
-			Produtos p = new Produtos("Fritadeira", "eletrodomestico", 400.50f, "frita alimentos sem uso de oleo");
+			Produtos p = new Produtos();
 			System.out.println(p.getNome()+"/"+p.getPreco());
 			List<Produtos> l=(List<Produtos>)ProdutosDAO.getInstance().findAll();
 			
-			for (Produtos a:l){
-				if(a.getNome().equals(p.getNome())){
-					System.out.println("Produto Ja existe"+a.getNome());
-					break;
-				}else{
-					ProdutosDAO.getInstance().persist(p);
-					break;
-				}
-			}
 			
+			
+					
+				
 			
 			//Method m = GenericDao.class.getDeclaredMethod("save");
 			//m.setAccessible(true);			
 			//m.invoke(dao);
 		    //dao.save((Produtos)p);
-			
+			p=ProdutosDAO.getInstance().getById(5);
+			p.setPreco(45568.55f);
+			ProdutosDAO.getInstance().merge(p);
 			for (Produtos a:l){
-				System.out.println(a.getNome()+"/"+a.getPreco());
+				
+				System.out.println(a.getId()+"/"+a.getNome()+"/"+a.getPreco());
 			}
 			
 			
 		
 		
-	}
+	}*/
+
+	
 
 }

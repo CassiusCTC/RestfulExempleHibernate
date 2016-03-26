@@ -6,16 +6,17 @@
     http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>RestfulAplicationServerCRUDExemple</display-name>
   <servlet> 
-      <servlet-name>Jersey RESTful</servlet-name>
+      <servlet-name>RestfulAplication</servlet-name>
        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> 
        <init-param> <param-name>com.sun.jersey.config.property.packages</param-name> 
             
            <param-value>br.com.restfulcrud.resource</param-value> 
          
-           </init-param> <load-on-startup>1</load-on-startup> 
+       </init-param> 
+       <load-on-startup>1</load-on-startup> 
   </servlet> 
   <servlet-mapping> 
-           <servlet-name>Jersey RESTful</servlet-name>
+           <servlet-name>RestfulAplication</servlet-name>
            <url-pattern>/*</url-pattern> 
  </servlet-mapping>
 

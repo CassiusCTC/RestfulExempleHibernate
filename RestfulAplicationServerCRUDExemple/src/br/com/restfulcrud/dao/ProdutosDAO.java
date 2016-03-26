@@ -31,6 +31,7 @@ public class ProdutosDAO implements InterfaceDAO<Produtos> {
 	public Produtos getById(Integer id) {
 		 return entityManager.find(Produtos.class, id);
 	}
+	
 
 	
 	@SuppressWarnings("unchecked")
@@ -68,7 +69,8 @@ public class ProdutosDAO implements InterfaceDAO<Produtos> {
 	@Override
 	public void removeById(Integer id) {
 		try{ 
-			Produtos t = getById(id); remove(t); 
+			Produtos t = getById(id); 
+			remove(t); 
 		}catch (Exception ex){
 			ex.printStackTrace(); 
 		}
@@ -78,6 +80,7 @@ public class ProdutosDAO implements InterfaceDAO<Produtos> {
 	public void merge(Produtos t) {
 		try { 
 			  entityManager.getTransaction().begin(); 
+			  entityManager.flush();
 		      entityManager.merge(t); 
 		      entityManager.getTransaction().commit(); 
 		}catch (Exception ex) { 
